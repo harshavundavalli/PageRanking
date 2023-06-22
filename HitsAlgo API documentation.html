@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)file:///C:/Users/balup/PycharmProjects/pythonProject1/pythonProject1/HitsAlgo.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc 0.10.0">
+<title>HitsAlgo API documentation</title>
+<meta name="description" content="">
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin="">
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin="">
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin="">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer="" src="./HitsAlgo API documentation_files/highlight.min.js.download" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin=""></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>HitsAlgo</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-comment">#!/usr/bin/env python</span>
+<span class="hljs-comment"># coding: utf-8</span>
+
+<span class="hljs-comment"># In[1]:</span>
+
+
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">import</span> networkx <span class="hljs-keyword">as</span> nx
+<span class="hljs-keyword">from</span> nltk.corpus <span class="hljs-keyword">import</span> stopwords
+<span class="hljs-keyword">from</span> nltk.stem <span class="hljs-keyword">import</span> WordNetLemmatizer
+lemmatizer = WordNetLemmatizer()
+<span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+<span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">import</span> collections
+<span class="hljs-keyword">import</span> scipy <span class="hljs-keyword">as</span> sp
+
+
+<span class="hljs-comment"># In[2]:</span>
+
+
+<span class="hljs-string">"""Taking the given graph as input into G"""</span>
+G = nx.read_gpickle(<span class="hljs-string">"web_graph.gpickle"</span>)
+G
+
+
+<span class="hljs-comment"># In[3]:</span>
+
+
+G.nodes[<span class="hljs-number">0</span>][<span class="hljs-string">'page_content'</span>]
+
+
+<span class="hljs-comment"># In[4]:</span>
+
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span>(<span class="hljs-params">G</span>):</span>
+    <span class="hljs-string">""" This function is to draw the graph"""</span>
+    pos = {i: G.nodes[i][<span class="hljs-string">'pos'</span>] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(G.nodes))}
+    nx.draw(G, pos,with_labels=<span class="hljs-literal">True</span>)
+
+
+<span class="hljs-comment"># In[5]:</span>
+
+
+len(G.nodes)
+<span class="hljs-string">"""Edges present in the graph"""</span>
+G.edges
+
+
+<span class="hljs-comment"># In[6]:</span>
+
+<span class="hljs-string">""" Adjacency Matrix for the given graph G"""</span>
+Adj = nx.adjacency_matrix(G)
+Adj
+
+
+<span class="hljs-comment"># In[7]:</span>
+
+
+Adj = Adj.todense()
+
+
+<span class="hljs-comment"># In[8]:</span>
+
+
+Adj
+
+
+<span class="hljs-comment"># In[9]:</span>
+
+
+Adj = np.array(Adj)
+Adj
+
+
+<span class="hljs-comment"># In[10]:</span>
+
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_words</span>(<span class="hljs-params">st</span>):</span>
+    <span class="hljs-string">"""This is the preprocessing step which gives the words in the corpus removing corpus\n
+    Stopwords removal and lemmatization is done on the data\n
+    :param
+        data in the document/query
+    :returns
+        List of words after performing the preprocessing on data
+    """</span>
+
+    st = st.lower()
+    st = <span class="hljs-string">''</span>.join(ch <span class="hljs-keyword">for</span> ch <span class="hljs-keyword">in</span> st <span class="hljs-keyword">if</span> ch.isalnum() <span class="hljs-keyword">or</span> ch==<span class="hljs-string">' '</span>)
+    words  = st.split()
+    stpwrds = set(stopwords.words(<span class="hljs-string">'english'</span>))
+    newwords = set()
+    <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> words:
+        word = lemmatizer.lemmatize(word)
+        <span class="hljs-keyword">if</span> word <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> stpwrds <span class="hljs-keyword">and</span> word != <span class="hljs-string">' '</span> <span class="hljs-keyword">and</span> word !=<span class="hljs-string">''</span> :
+            newwords.add(word)
+
+    newwords = list(newwords)
+    <span class="hljs-keyword">if</span> len(newwords) == <span class="hljs-number">0</span>:
+        print(<span class="hljs-string">"True"</span>)
+    <span class="hljs-keyword">return</span> newwords
+    
+
+
+<span class="hljs-comment"># In[11]:</span>
+
+
+<span class="hljs-string">"""This generate the posting list from the given data"""</span>
+posting_list = {}
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(G.nodes)):
+    doc = G.nodes[i][<span class="hljs-string">'page_content'</span>]
+    words = get_words(doc)
+    <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> words:
+        s = posting_list.get(word, <span class="hljs-literal">None</span>)
+        <span class="hljs-keyword">if</span> s <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+            s = set()
+            posting_list[word] = s
+        s.add(i)
+
+
+<span class="hljs-comment"># In[12]:</span>
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hits_algo</span>(<span class="hljs-params">query</span>):</span>
+    <span class="hljs-string">""" Words from the given query are lemmalizedand stored in qwords\n
+    Base Set and Root set for the given query are generated\n
+    Sub graph of the given graph is taken with nodes present in the BaseSet\n
+    Adjacency matrix A is generated for the obtained subgraph\n
+    Eigen vectors and Eigen values are generated for A.A^T and A^T.A \n
+    The principal eigen vector of AA^T gives the hub scores and the principal eigen vector of A^T.A gives us the Authority scores of the nodes\n
+    The nodes are then ordered according to their corresponding velues in the eigen vector\n
+    This print the hubs and authorities in decreasing Scores\n
+
+
+    :param
+        This take given query as parameter
+
+
+
+    :returns
+        list of processing time and the number of edges
+        
+    """</span>
+    
+
+    start = time.time()
+    
+    qwords = get_words(query)
+    <span class="hljs-keyword">if</span>(len(qwords)!=<span class="hljs-number">0</span>): 
+        posting_list.get(query,<span class="hljs-literal">None</span>)
+        rootSet = posting_list.get(qwords[<span class="hljs-number">0</span>],set()).copy()
+        <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> qwords:
+            rootSet = rootSet.intersection(posting_list.get(word,set()))
+        baseSet = rootSet.copy()
+        <span class="hljs-keyword">for</span> node <span class="hljs-keyword">in</span> rootSet:
+            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(Adj[<span class="hljs-number">0</span>])):
+                <span class="hljs-keyword">if</span> Adj[node][i] == <span class="hljs-number">1</span>:
+                    baseSet.add(i)
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(Adj)):
+            <span class="hljs-keyword">for</span> node <span class="hljs-keyword">in</span> rootSet:
+                <span class="hljs-keyword">if</span> Adj[i][node] == <span class="hljs-number">1</span>:
+                    baseSet.add(i)
+        baseList = list(baseSet)
+        G1 = G.subgraph(baseList)
+        nodesList = list(G1.nodes)
+        A  = nx.adjacency_matrix(G1)
+        A = A.todense()
+        A = np.array(A)
+        AAT = A.dot(A.transpose())
+        ATA = A.transpose().dot(A)
+        hub,Hubscores = np.linalg.eig(AAT)
+        index = np.argmax(hub)
+        Hubscores[:,index]  = Hubscores[:,index]/((sum(Hubscores[:,index])))
+        arr = np.flip((np.argsort(Hubscores[:,index])))
+        auth,AuthorityScores = np.linalg.eig(ATA)
+        index = np.argmax(auth)
+        AuthorityScores[:,index] = AuthorityScores[:,index]/((sum(AuthorityScores[:,index])))
+        arr1 = np.flip((np.argsort(AuthorityScores[:,index])))
+        list_h = arr.tolist()
+        orderOfHub = np.array(nodesList)
+        orderOfHub[list_h]
+        print(<span class="hljs-string">"List of nodes with increasing HubScore: "</span> )
+        print(orderOfHub[list_h])
+        list1 = arr1.tolist()
+        orderOfAuthority = np.array(nodesList)
+        orderOfAuthority[list1]
+        print(<span class="hljs-string">"List of nodes with increasing AuthorityScore: "</span>)
+        <span class="hljs-keyword">print</span> (orderOfAuthority[list1])
+        end = time.time()
+        time_diff = end - start
+        print(time_diff)
+        <span class="hljs-comment">#print("No of edges/links in the subgraph: ")</span>
+        print(len(G1.edges))
+        <span class="hljs-keyword">return</span> list([time_diff,len(G1.edges)])
+    
+    
+
+
+<span class="hljs-comment"># In[29]:</span>
+
+
+query = input(<span class="hljs-string">"Enter the query : "</span>)
+hits_algo(query)
+
+
+<span class="hljs-comment"># In[ ]:</span>
+
+
+
+
+
+<span class="hljs-comment"># In[39]:</span>
+
+
+i=<span class="hljs-number">1</span>
+dict1 ={}
+<span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> posting_list.keys():
+    <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">1400</span>):
+        <span class="hljs-keyword">break</span>
+    v = hits_algo(key)
+    dict1[v[<span class="hljs-number">1</span>]]=(v[<span class="hljs-number">0</span>])
+    i=i+<span class="hljs-number">1</span>
+    
+
+
+<span class="hljs-comment"># In[40]:</span>
+
+
+dict1 = collections.OrderedDict(sorted(dict1.items()))
+dict1
+
+
+<span class="hljs-comment"># In[42]:</span>
+
+
+
+
+x = dict1.keys()
+y = dict1.values()
+ 
+<span class="hljs-comment"># Plotting the Graph</span>
+plt.plot(x, y)
+plt.title(<span class="hljs-string">"Plot of Runtime vs Number of edges"</span>)
+plt.xlabel(<span class="hljs-string">"Number Of Edges"</span>)
+plt.ylabel(<span class="hljs-string">"Runtime"</span>)
+plt.show()
+
+
+<span class="hljs-comment"># In[ ]:</span>
+
+
+
+
+
+<span class="hljs-comment"># In[ ]:</span>
+
+
+
+
+
+<span class="hljs-comment"># In[ ]:</span></code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="HitsAlgo.draw"><code class="name flex">
+<span>def <span class="ident">draw</span></span>(<span>G)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This function is to draw the graph</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span>(<span class="hljs-params">G</span>):</span>
+    <span class="hljs-string">""" This function is to draw the graph"""</span>
+    pos = {i: G.nodes[i][<span class="hljs-string">'pos'</span>] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(G.nodes))}
+    nx.draw(G, pos,with_labels=<span class="hljs-literal">True</span>)</code></pre>
+</details>
+</dd>
+<dt id="HitsAlgo.get_words"><code class="name flex">
+<span>def <span class="ident">get_words</span></span>(<span>st)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This is the preprocessing step which gives the words in the corpus removing corpus</p>
+<p>Stopwords removal and lemmatization is done on the data</p>
+<p>:param
+data in the document/query
+:returns
+List of words after performing the preprocessing on data</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_words</span>(<span class="hljs-params">st</span>):</span>
+    <span class="hljs-string">"""This is the preprocessing step which gives the words in the corpus removing corpus\n
+    Stopwords removal and lemmatization is done on the data\n
+    :param
+        data in the document/query
+    :returns
+        List of words after performing the preprocessing on data
+    """</span>
+
+    st = st.lower()
+    st = <span class="hljs-string">''</span>.join(ch <span class="hljs-keyword">for</span> ch <span class="hljs-keyword">in</span> st <span class="hljs-keyword">if</span> ch.isalnum() <span class="hljs-keyword">or</span> ch==<span class="hljs-string">' '</span>)
+    words  = st.split()
+    stpwrds = set(stopwords.words(<span class="hljs-string">'english'</span>))
+    newwords = set()
+    <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> words:
+        word = lemmatizer.lemmatize(word)
+        <span class="hljs-keyword">if</span> word <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> stpwrds <span class="hljs-keyword">and</span> word != <span class="hljs-string">' '</span> <span class="hljs-keyword">and</span> word !=<span class="hljs-string">''</span> :
+            newwords.add(word)
+
+    newwords = list(newwords)
+    <span class="hljs-keyword">if</span> len(newwords) == <span class="hljs-number">0</span>:
+        print(<span class="hljs-string">"True"</span>)
+    <span class="hljs-keyword">return</span> newwords</code></pre>
+</details>
+</dd>
+<dt id="HitsAlgo.hits_algo"><code class="name flex">
+<span>def <span class="ident">hits_algo</span></span>(<span>query)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Words from the given query are lemmalized and stored in qwords</p>
+<p>Base Set and Root set for the given query are generated</p>
+<p>Sub graph of the given graph is taken with nodes present in the BaseSet</p>
+<p>Adjacency matrix A is generated for the obtained subgraph</p>
+<p>Eigen vectors and Eigen values are generated for A.A^T and A^T.A </p>
+<p>The principal eigen vector of AA^T gives the hub scores and the principal eigen vector of A^T.A gives us the Authority scores of the nodes</p>
+<p>The nodes are then ordered according to their corresponding values in the eigen vector</p>
+<p>This print the hubs and authorities in decreasing Scores</p>
+<p>:param
+This take given query as parameter</p>
+<p>:returns
+list of processing time and the number of edges</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python hljs"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hits_algo</span>(<span class="hljs-params">query</span>):</span>
+    <span class="hljs-string">""" Words from the given query are lemmalizedand stored in qwords\n
+    Base Set and Root set for the given query are generated\n
+    Sub graph of the given graph is taken with nodes present in the BaseSet\n
+    Adjacency matrix A is generated for the obtained subgraph\n
+    Eigen vectors and Eigen values are generated for A.A^T and A^T.A \n
+    The principal eigen vector of AA^T gives the hub scores and the principal eigen vector of A^T.A gives us the Authority scores of the nodes\n
+    The nodes are then ordered according to their corresponding velues in the eigen vector\n
+    This print the hubs and authorities in decreasing Scores\n
+
+
+    :param
+        This take given query as parameter
+
+
+
+    :returns
+        list of processing time and the number of edges
+        
+    """</span>
+    
+
+    start = time.time()
+    
+    qwords = get_words(query)
+    <span class="hljs-keyword">if</span>(len(qwords)!=<span class="hljs-number">0</span>): 
+        posting_list.get(query,<span class="hljs-literal">None</span>)
+        rootSet = posting_list.get(qwords[<span class="hljs-number">0</span>],set()).copy()
+        <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> qwords:
+            rootSet = rootSet.intersection(posting_list.get(word,set()))
+        baseSet = rootSet.copy()
+        <span class="hljs-keyword">for</span> node <span class="hljs-keyword">in</span> rootSet:
+            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(Adj[<span class="hljs-number">0</span>])):
+                <span class="hljs-keyword">if</span> Adj[node][i] == <span class="hljs-number">1</span>:
+                    baseSet.add(i)
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(Adj)):
+            <span class="hljs-keyword">for</span> node <span class="hljs-keyword">in</span> rootSet:
+                <span class="hljs-keyword">if</span> Adj[i][node] == <span class="hljs-number">1</span>:
+                    baseSet.add(i)
+        baseList = list(baseSet)
+        G1 = G.subgraph(baseList)
+        nodesList = list(G1.nodes)
+        A  = nx.adjacency_matrix(G1)
+        A = A.todense()
+        A = np.array(A)
+        AAT = A.dot(A.transpose())
+        ATA = A.transpose().dot(A)
+        hub,Hubscores = np.linalg.eig(AAT)
+        index = np.argmax(hub)
+        Hubscores[:,index]  = Hubscores[:,index]/((sum(Hubscores[:,index])))
+        arr = np.flip((np.argsort(Hubscores[:,index])))
+        auth,AuthorityScores = np.linalg.eig(ATA)
+        index = np.argmax(auth)
+        AuthorityScores[:,index] = AuthorityScores[:,index]/((sum(AuthorityScores[:,index])))
+        arr1 = np.flip((np.argsort(AuthorityScores[:,index])))
+        list_h = arr.tolist()
+        orderOfHub = np.array(nodesList)
+        orderOfHub[list_h]
+        print(<span class="hljs-string">"List of nodes with increasing HubScore: "</span> )
+        print(orderOfHub[list_h])
+        list1 = arr1.tolist()
+        orderOfAuthority = np.array(nodesList)
+        orderOfAuthority[list1]
+        print(<span class="hljs-string">"List of nodes with increasing AuthorityScore: "</span>)
+        <span class="hljs-keyword">print</span> (orderOfAuthority[list1])
+        end = time.time()
+        time_diff = end - start
+        print(time_diff)
+        <span class="hljs-comment">#print("No of edges/links in the subgraph: ")</span>
+        print(len(G1.edges))
+        <span class="hljs-keyword">return</span> list([time_diff,len(G1.edges)])</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="file:///C:/Users/balup/PycharmProjects/pythonProject1/pythonProject1/HitsAlgo.html#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="HitsAlgo.draw" href="file:///C:/Users/balup/PycharmProjects/pythonProject1/pythonProject1/HitsAlgo.html#HitsAlgo.draw">draw</a></code></li>
+<li><code><a title="HitsAlgo.get_words" href="file:///C:/Users/balup/PycharmProjects/pythonProject1/pythonProject1/HitsAlgo.html#HitsAlgo.get_words">get_words</a></code></li>
+<li><code><a title="HitsAlgo.hits_algo" href="file:///C:/Users/balup/PycharmProjects/pythonProject1/pythonProject1/HitsAlgo.html#HitsAlgo.hits_algo">hits_algo</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+
+</body></html>
